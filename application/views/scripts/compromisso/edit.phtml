@@ -1,0 +1,11 @@
+<form action="<?= $this->url(array("controller" => "compromisso", "action" => "update"), null, true) ?>" method="post">
+    <input type="hidden" name="com_id" value="<?= $this->compromisso['com_id'] ?>" />
+    <table width="100%" cellpadding="3" cellspacing="2">
+        <tr>
+            <td>Nome:</td>
+            <td><input type="text" name="com_nome" value="<?= $this->compromisso['com_nome'] ?>" /></td>
+        </tr>
+
+    </table>
+    <input type="submit" value="Enviar" />
+</form>

@@ -1,0 +1,17 @@
+<a href="<?=$this->url(array("controller"=>"compromisso","action"=>"new"),null,true)?>">Novo Contato</a>
+<table width="100%" cellpadding="3" cellspacing="0" border="1">
+   <tr>
+      <th>Nome</th>
+   </tr>
+   <?foreach($this->compromisso AS $key => $comp):?>
+   <tr>
+      <td><?=$comp['com_nome']?></td>
+      <td>
+         <a href="<?=$this->url(array("controller"=>"compromisso","action"=>"show","id"=>"{$comp['com_id']}"),null,true)?>">Visualizar</a>
+         <a href="<?=$this->url(array("controller"=>"compromisso","action"=>"edit","id"=>"{$comp['com_id']}"),null,true)?>">Alterar</a>
+         <a href="<?=$this->url(array("controller"=>"compromisso","action"=>"destroy","id"=>"{$comp['com_id']}"),null,true)?>">Delete</a>
+      </td>
+   </tr>
+   <?endforeach;?>
+   <?php ?>
+</table>
